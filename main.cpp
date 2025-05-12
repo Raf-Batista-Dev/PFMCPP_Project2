@@ -16,12 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
+ int
+ float
+ bool
+ double
+ char
+ unsigned int
  
  
  
@@ -68,6 +68,54 @@ void variableDeclarations()
 
     
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+
+    int a = 5;
+    int second = 2;
+    int numberOfBooks = 15;
+
+    ignoreUnused(a);
+    ignoreUnused(second);
+    ignoreUnused(numberOfBooks);
+
+    float temp = 44.3f;
+    float change = 0.78f;
+    float b = .5556f;
+
+    ignoreUnused(temp);
+    ignoreUnused(change);
+    ignoreUnused(b);
+
+    bool isTodayFriday = false;
+    bool inCalifornia = true;
+    bool isRentDue = true;
+
+    ignoreUnused(isTodayFriday);
+    ignoreUnused(inCalifornia);
+    ignoreUnused(isRentDue);
+
+    double largeNum = 1000000;
+    double c = 134567789;
+    double population = 34451234;
+
+    ignoreUnused(largeNum);
+    ignoreUnused(c);
+    ignoreUnused(population);
+
+    char d = 'd';
+    char character = 'z';
+    char letter = 'F';
+
+    ignoreUnused(d);
+    ignoreUnused(character);
+    ignoreUnused(letter);
+
+    unsigned int neverNegative = 25;
+    unsigned int doubleTheSizeOfInt = 255;
+    unsigned int noBitNeeded = 1;
+
+    ignoreUnused(neverNegative);
+    ignoreUnused(doubleTheSizeOfInt);
+    ignoreUnused(noBitNeeded);
 }
 
 /*
@@ -84,43 +132,78 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+bool shouldAlarmRing(int currentTime, int alarmTime)
+{
+    ignoreUnused(currentTime, alarmTime);
+    return {};
+}
 /*
  2)
  */
-
+float checkCurrentTemperature(bool inFahrenheit = true)
+{
+    ignoreUnused(inFahrenheit);
+    return {};
+}
 /*
  3)
  */
-
+float convertFahreneitToCelcius(float fahrenheit)
+{
+    ignoreUnused(fahrenheit);
+    return {};
+}
 /*
  4)
  */
-
+int checkTrainStop(std::string currentStop, std::string destination, int numberOfStopsAway)
+{
+    ignoreUnused(currentStop, destination, numberOfStopsAway);
+    return {};
+}
 /*
  5)
  */
-
+char getStudentGrade(int studentId, std::string className)
+{
+    ignoreUnused(studentId, className);
+    return {};
+}
 /*
  6)
  */
-
+void buyGroceries(std::string shoppingList, int shoppingBags = 5, std::string groceryStoreLocation = "Closes One")
+{
+    ignoreUnused(shoppingList, shoppingBags, groceryStoreLocation);
+}
 /*
  7)
  */
-
+void practiceGuitar(bool practiceSweepPicking = true, bool practiceAlternatePicking = true, int practiceDurationInMinutes = 90)
+{
+    ignoreUnused(practiceSweepPicking, practiceAlternatePicking, practiceDurationInMinutes);
+}
 /*
  8)
  */
-
+void practiceDrums(bool practiceDoubleBass = true, bool practiceHeelToe = true, int practiceDurationInMinutes = 60)
+{
+    ignoreUnused(practiceDoubleBass, practiceHeelToe, practiceDurationInMinutes);
+}
 /*
  9)
  */
-
+void practiceKeyboard(std::string songToPractice, int practiceDurationInMinutes = 30)
+{
+    ignoreUnused(songToPractice, practiceDurationInMinutes);
+}
 /*
  10)
  */
-
+void cookDinner(std::string ingredients, std::string cookingMethod, int cookingDurationInMinutes)
+{
+    ignoreUnused(ingredients, cookingMethod, cookingDurationInMinutes);
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -141,27 +224,33 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto alarm = shouldAlarmRing(12, 13);
     //2)
-    
+    auto temperature = checkCurrentTemperature(true);
     //3)
-    
+    auto temperatureInCelcius = convertFahreneitToCelcius(75.2f);
     //4)
-    
+    auto currentTrainRide = checkTrainStop("stop B", "stop F", 4);
     //5)
-    
+    auto studentGrade = getStudentGrade(256, "Intro to programming");
     //6)
-    
+    buyGroceries("eggs, milk, coffee");
     //7)
-    
+    practiceGuitar(true, false, 45);
     //8)
-    
+    practiceDrums(true, true, 45);
     //9)
-    
+    practiceKeyboard("Midna's Lament from The Legend of Zelda: Twilight Princess", 30);
     //10)
-    
+    cookDinner("chicken thighs, bbq rub", "smoked", 180);
     
     ignoreUnused(carRented);
+    ignoreUnused(alarm);
+    ignoreUnused(temperature);
+    ignoreUnused(temperatureInCelcius);
+    ignoreUnused(currentTrainRide);
+    ignoreUnused(studentGrade);
+
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
