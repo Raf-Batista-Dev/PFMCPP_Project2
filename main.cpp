@@ -73,49 +73,44 @@ void variableDeclarations()
     int second = 2;
     int numberOfBooks = 15;
 
-    ignoreUnused(a);
-    ignoreUnused(second);
-    ignoreUnused(numberOfBooks);
-
     float temp = 44.3f;
     float change = 0.78f;
     float b = .5556f;
-
-    ignoreUnused(temp);
-    ignoreUnused(change);
-    ignoreUnused(b);
 
     bool isTodayFriday = false;
     bool inCalifornia = true;
     bool isRentDue = true;
 
-    ignoreUnused(isTodayFriday);
-    ignoreUnused(inCalifornia);
-    ignoreUnused(isRentDue);
-
     double largeNum = 1000000;
     double c = 134567789;
     double population = 34451234;
-
-    ignoreUnused(largeNum);
-    ignoreUnused(c);
-    ignoreUnused(population);
 
     char d = 'd';
     char character = 'z';
     char letter = 'F';
 
-    ignoreUnused(d);
-    ignoreUnused(character);
-    ignoreUnused(letter);
-
     unsigned int neverNegative = 25;
     unsigned int doubleTheSizeOfInt = 255;
     unsigned int noBitNeeded = 1;
 
-    ignoreUnused(neverNegative);
-    ignoreUnused(doubleTheSizeOfInt);
-    ignoreUnused(noBitNeeded);
+    ignoreUnused(a,
+                 second,
+                 numberOfBooks,
+                 temp,
+                 change,
+                 b,
+                 isTodayFriday,
+                 inCalifornia,
+                 isRentDue,
+                 largeNum,
+                 c,
+                 population,
+                 d,
+                 character,
+                 letter,
+                 neverNegative,
+                 doubleTheSizeOfInt,
+                 noBitNeeded);
 }
 
 /*
@@ -244,12 +239,8 @@ int main()
     //10)
     cookDinner("chicken thighs, bbq rub", "smoked", 180);
     
-    ignoreUnused(carRented);
-    ignoreUnused(alarm);
-    ignoreUnused(temperature);
-    ignoreUnused(temperatureInCelcius);
-    ignoreUnused(currentTrainRide);
-    ignoreUnused(studentGrade);
+    ignoreUnused(carRented, alarm, temperature, temperatureInCelcius, currentTrainRide, studentGrade);
+
 
     std::cout << "good to go!" << std::endl;
     return 0;    
